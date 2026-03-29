@@ -190,6 +190,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* M365 Integration */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+          <div className="flex-1">
+            <div className="flex items-center gap-2 mb-4">
+              <p className="text-blue-700 font-semibold text-sm">INTEGRATIONS</p>
+              <span className="text-xs font-bold bg-green-100 text-green-700 px-2 py-0.5 rounded-full">선택 연동</span>
+            </div>
+            <h2 className="text-3xl font-extrabold text-gray-900 mb-4">
+              Microsoft 365와 연결하면<br />더 강력해집니다
+            </h2>
+            <p className="text-gray-500 mb-6 leading-relaxed">
+              M365 연동은 <strong>선택 사항</strong>입니다. 연동 없이도 ERP의 모든 핵심 기능을 사용할 수 있습니다.
+              M365 계정이 있다면 아래 기능이 자동으로 활성화됩니다.
+            </p>
+            <ul className="space-y-3">
+              {[
+                { icon: "📅", title: "Outlook 일정 동기화", desc: "유지보수·작업 일정이 Outlook 캘린더와 자동 연동" },
+                { icon: "💬", title: "Teams 알림", desc: "계약 승인 요청, 품의서 결재 알림을 Teams 채팅으로 수신" },
+                { icon: "🏢", title: "Azure AD 조직도", desc: "M365 테넌트 사용자 기반으로 조직도 자동 구성·동기화" },
+              ].map((item) => (
+                <li key={item.title} className="flex items-start gap-3">
+                  <span className="text-xl flex-shrink-0">{item.icon}</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 text-sm">{item.title}</p>
+                    <p className="text-gray-500 text-sm">{item.desc}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex-1 bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
+            <p className="font-bold text-gray-900 mb-6 text-center">연동 없이도 사용 가능한 기능</p>
+            <ul className="space-y-3 text-sm text-gray-600">
+              {[
+                "거래처·계약·재무·인사 관리",
+                "견적서 발행 및 영업 파이프라인",
+                "유지보수 일정 및 보고서 생성",
+                "전 테이블 감사 추적",
+                "Popbill 세금계산서·은행 연동",
+                "PDF 보고서 자동 생성",
+                "역할 기반 권한 관리",
+              ].map((f) => (
+                <li key={f} className="flex items-center gap-2">
+                  <span className="text-blue-500">✓</span> {f}
+                </li>
+              ))}
+            </ul>
+            <p className="text-xs text-gray-400 text-center mt-6">
+              M365 연동은 설정 화면에서 언제든 추가 가능
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* How It Works */}
       <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
