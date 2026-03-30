@@ -135,22 +135,25 @@ export default function Home() {
                   <th className="px-6 py-4 font-bold text-blue-700 bg-blue-50">PROJECT-K</th>
                   <th className="px-6 py-4 font-semibold text-gray-500">SAP B1</th>
                   <th className="px-6 py-4 font-semibold text-gray-500">더존 iCUBE</th>
+                  <th className="px-6 py-4 font-semibold text-gray-500">이카운트·위하고</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-50">
                 {[
-                  ["초기 비용", "낮음", "매우 높음", "높음"],
-                  ["월 운영 비용", "월 49만원~", "수백만원~", "수십~수백만원"],
-                  ["커스터마이징", "자유 (Django)", "제한적", "제한적"],
-                  ["도입 기간", "6–10주", "6–12개월", "3–6개월"],
-                  ["클라우드", "Azure 완전 관리", "옵션", "일부"],
-                  ["전체 이력 추적", "전 테이블 자동", "별도 설정", "제한"],
-                ].map(([item, pk, sap, dz]) => (
+                  ["초기 비용", "낮음", "매우 높음", "높음", "낮음"],
+                  ["월 운영 비용", "월 49만원~", "수백만원~", "수십~수백만원", "월 5~20만원"],
+                  ["커스터마이징", "자유 (Django)", "제한적", "제한적", "거의 불가"],
+                  ["도입 기간", "6–10주", "6–12개월", "3–6개월", "1–2주"],
+                  ["클라우드", "Azure 완전 관리", "옵션", "일부", "클라우드"],
+                  ["전체 이력 추적", "전 테이블 자동", "별도 설정", "제한", "제한"],
+                  ["M365 연동", "Outlook·Teams·AD", "옵션", "제한", "없음"],
+                ].map(([item, pk, sap, dz, ic]) => (
                   <tr key={item} className="hover:bg-gray-50/50">
                     <td className="px-6 py-3.5 font-medium text-gray-700">{item}</td>
                     <td className="px-6 py-3.5 text-center font-semibold text-blue-700 bg-blue-50/50">{pk}</td>
                     <td className="px-6 py-3.5 text-center text-gray-400">{sap}</td>
                     <td className="px-6 py-3.5 text-center text-gray-400">{dz}</td>
+                    <td className="px-6 py-3.5 text-center text-gray-400">{ic}</td>
                   </tr>
                 ))}
               </tbody>
